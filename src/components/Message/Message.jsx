@@ -126,6 +126,26 @@ const Message = () => {
         console.log(e);
         setMsg((getEmoji) => getEmoji + e.emoji)
     }
+
+    const handleEnter = (e) => {
+        console.log(e);
+        const chatID = data.uid < chat.id ? `${data.uid}_${chat.id}` : `${chat.id}_${data.uid}`;
+        if (e.key == 'Enter') {
+            if (chat.statues === "single") {
+                set(push(ref(db, 'messages/')), {
+                    chatID,
+                    message: msg,
+                    whosenderid: data.uid,
+                    whosendername: data.displayName,
+                    whoreceiverid: chat.id,
+                    whoreceivername: chat.name,
+                    datetime: moment().format('LTS')
+                })
+            } else {
+                console.log('group');
+            }
+        }
+    }
     return (
         <div className='p-6 flex justify-between'>
 
@@ -199,7 +219,7 @@ const Message = () => {
 
                     <div className='flex items-center gap-x-[15px] mr-[35px]'>
                         <div className='w-full flex relative'>
-                            <input type="text" value={msg} onChange={(e) => setMsg(e.target.value)} placeholder='write your massegs' className='border border-[#c3c3c3] w-full rounded-2xl py-[10px] pl-[20px] pr-[90px]' />
+                            <input onKeyDown={handleEnter} type="text" value={msg} onChange={(e) => setMsg(e.target.value)} placeholder='write your massegs' className='border border-[#c3c3c3] w-full rounded-2xl py-[10px] pl-[20px] pr-[90px]' />
                             <CgAttachment className='absolute top-[30%] right-[5%] text-[20px] text-[#ff5acb] cursor-pointer' />
                             <FaRegSmile onClick={emojiPick} className='absolute top-[30%] right-[10%] text-[20px] text-[#ff5acb] cursor-pointer' />
 
@@ -210,7 +230,7 @@ const Message = () => {
                     <div className='block relative'>
                         {
                             showEmojiPicker &&
-                            <EmojiPicker onEmojiClick={handleGetEmoji} className=' absolute top-[15px] right-0' />
+                            <EmojiPicker onEmojiClick={handleGetEmoji} className=' absolute top-[15px] right-0 mx-auto' />
                         }
                     </div>
                 </div>

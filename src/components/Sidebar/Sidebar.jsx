@@ -36,13 +36,13 @@ const Sidebar = () => {
     })
 
     const handleLogOut = () => {
-        signOut(auth) .then(() => {
-                setTimeout(() => {
-                    toast.success("Logged out Sucessfully!!")
-                    navigate('/')
-                }, 2000);
-                alert('Sure to sign out??');
-            })
+        signOut(auth).then(() => {
+            setTimeout(() => {
+                toast.success("Logged out Sucessfully!!")
+                navigate('/')
+            }, 2000);
+            alert('Sure to sign out??');
+        })
     }
 
     return (
