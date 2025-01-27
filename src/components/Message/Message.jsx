@@ -87,7 +87,7 @@ const Message = () => {
         } else {
             console.log('group');
         }
-        setShowEmojiPicker((emoji) => !emoji)
+        setShowEmojiPicker(false)
     }
 
     const [msgSent, setMsgSent] = useState([])
