@@ -28,9 +28,10 @@ const SuggestedUser = () => {
   }, [])
 
   //FollowRequests
+  const [sentFriendRequest, setSentFriendRequest] = useState([])
   const [sentFollowRequest, setSentFollowRequest] = useState([])
   const handleFollow = (item) => {
-    set(push(ref(db, 'sentfollow/')), {
+    set(push(ref(db, 'sentfriendrequest/')), {
       senderid: data.uid,
       sendername: data.displayName,
       receivername: item.username,
@@ -39,29 +40,28 @@ const SuggestedUser = () => {
   }
 
   useEffect(() => {
-    const followRef = ref(db, 'sentfollow/');
+    const followRef = ref(db, 'sentfriendrequest/');
     onValue(followRef, (snapshot) => {
       let arr = []
       snapshot.forEach((item) => {
         arr.push(item.val().senderid + item.val().receiverid);
       })
-      setSentFollowRequest(arr)
+      setSentFriendRequest(arr)
     });
   }, [])
 
   //FollowAccept
-  const [followingAccept, setFollowingAccept] = useState([])
+  const [friendAccept, setFriendAccept] = useState([])
   useEffect(() => {
-    const followingRef = ref(db, 'followers/');
-    onValue(followingRef, (snapshot) => {
+    const friendingRef = ref(db, 'friends/');
+    onValue(friendingRef, (snapshot) => {
       let arr = []
       snapshot.forEach((item) => {
         arr.push(item.val().receiverid + item.val().senderid)
       })
-      setFollowingAccept(arr)
+      setFriendAccept(arr)
     })
   }, [])
-  console.log(followingAccept);
 
   return (
     <div className='py-[20px] px-[25px] bg-white shadow-2xl mt-[30px] rounded-2xl  '>
@@ -90,15 +90,15 @@ const SuggestedUser = () => {
 
               <div className="btn">
                 {
-                  followingAccept.includes(data.uid + item.userid) || followingAccept.includes(item.userid + data.uid)
+                  friendAccept.includes(data.uid + item.userid) || friendAccept.includes(item.userid + data.uid)
                     ? <div className='flex items-center gap-x-[9px]'>
                       <CiBookmarkCheck className='text-[#ff5acb] text-[25px] font-bold' />
                       <p className='cursor-pointer text-[#ff5acb] font-handlee font-bold text-[18px] '>Friends</p>
                     </div>
                     :
-                    sentFollowRequest.includes(data.uid + item.userid) || sentFollowRequest.includes(item.userid + data.uid)
+                    sentFriendRequest.includes(data.uid + item.userid) || sentFriendRequest.includes(item.userid + data.uid)
                       ? <p className='cursor-pointer text-[#ff5acb] font-handlee font-bold hover:bg-[#ff5acb] hover:text-white transition duration-300 text-[18px] px-[15px] py-[10px] rounded-md'>Pendign</p>
-                      : <p onClick={() => handleFollow(item)} className='cursor-pointer text-[#ff5acb] font-handlee font-bold hover:bg-[#ff5acb] hover:text-white transition duration-300 text-[18px] px-[15px] py-[10px] rounded-md'>Follow</p>
+                      : <p onClick={() => handleFollow(item)} className='cursor-pointer text-[#ff5acb] font-handlee font-bold hover:bg-[#ff5acb] hover:text-white transition duration-300 text-[18px] px-[15px] py-[10px] rounded-md'>Add Friend</p>
                 }
               </div>
             </div>

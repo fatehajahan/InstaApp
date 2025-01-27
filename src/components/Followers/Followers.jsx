@@ -7,18 +7,18 @@ import { Link } from 'react-router-dom'
 const Friends = () => {
     const data = useSelector((selector) => selector.userDetails.userInfo)
     const db = getDatabase()
-    const [follower, setFollower] = useState([])
+    const [friend, setFriend] = useState([])
 
     useEffect(() => {
-        const followerRef = ref(db, 'followers/')
-        onValue(followerRef, (snapshot) => {
+        const friendRef = ref(db, 'friends/')
+        onValue(friendRef, (snapshot) => {
             let arr = []
             snapshot.forEach((item) => {
                 if(data.uid == item.val().receiverid || data.uid == item.val().senderid){
                     arr.push(item.val());
                 }
             })
-            setFollower(arr)
+            setFriend(arr)
         })
     }, [])
 
@@ -27,7 +27,7 @@ const Friends = () => {
             <div>
                 <p className='font-roboto pb-[18px] font-semibold text-[18px]'>My Followers: </p>
                 {
-                    follower.map((item) => (
+                    friend.map((item) => (
                         <div className="id1 flex items-center justify-between">
                             <div className='flex items-center gap-x-[15px]'>
                                 <img src={profileImg} alt="" className='rounded-full w-[60px]' />

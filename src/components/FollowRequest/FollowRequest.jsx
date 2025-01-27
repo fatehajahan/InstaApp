@@ -7,9 +7,9 @@ const sentFollowRequest = () => {
     const data = useSelector((selector) => selector.userDetails.userInfo)
     const db = getDatabase()
     //sentFollowRequest
-    const [sentFollowRequest, setSentFollowRequest] = useState([])
+    const [sentFriendRequest, setSentFriendRequest] = useState([])
     useEffect(() => {
-        const sentFollowRequestRef = ref(db, 'sentfollow/');
+        const sentFollowRequestRef = ref(db, 'sentfriendrequest/');
         onValue(sentFollowRequestRef, (snapshot) => {
             let arr = []
             snapshot.forEach((item) => {
@@ -17,25 +17,25 @@ const sentFollowRequest = () => {
                     arr.push({ ...item.val(), userid: item.key })
                 }
             })
-            setSentFollowRequest(arr)
+            setSentFriendRequest(arr)
         })
     }, [])
 
     //followAccept
 
     const handleAccept = (item) => {
-        set(push(ref(db, 'followers')), {
+        set(push(ref(db, 'friends')), {
             ...item
         }).then(() => {
-            remove(ref(db, 'sentfollow/' + item.userid))
+            remove(ref(db, 'sentfriendrequest/' + item.userid))
         })
     }
     return (
         <div className='mt-[30px] py-[20px] px-[25px] bg-white shadow-2xl rounded-2xl'>
             <p className='font-roboto pb-[18px] font-semibold text-[18px]'>Follow Requests</p>
             {
-                sentFollowRequest.map((item, index) => (
-                    <div key={sentFollowRequest.id || index}>
+                sentFriendRequest.map((item, index) => (
+                    <div key={sentFriendRequest.id || index}>
                         <div className="id1 flex items-center justify-between">
                             <div className='flex items-center gap-x-[15px]'>
                                 <img src={profileImg} alt="" className='rounded-full w-[60px]' />
