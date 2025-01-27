@@ -23,7 +23,7 @@ const Message = () => {
     const [follower, setFollower] = useState([])
 
     useEffect(() => {
-        const followerRef = ref(db, 'followers/')
+        const followerRef = ref(db, 'friends/')
         onValue(followerRef, (snapshot) => {
             let arr = []
             snapshot.forEach((item) => {
@@ -160,7 +160,7 @@ const Message = () => {
                 </div>
 
                 <div className="messages mt-[50px]">
-                    <p className='font-roboto text-[25px] pb-[18px]'>Followers to message</p>
+                    <p className='font-roboto text-[25px] pb-[18px]'>Friends to message</p>
                     {
                         follower.map((item, index) => (
                             <div key={index} onClick={() => handlechat(item)} className="id1 flex items-center justify-between">

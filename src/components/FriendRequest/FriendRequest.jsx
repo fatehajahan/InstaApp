@@ -32,7 +32,7 @@ const sentFollowRequest = () => {
     }
     return (
         <div className='mt-[30px] py-[20px] px-[25px] bg-white shadow-2xl rounded-2xl'>
-            <p className='font-roboto pb-[18px] font-semibold text-[18px]'>Follow Requests</p>
+            <p className='font-roboto pb-[18px] font-semibold text-[18px]'>Friend Requests</p>
             {
                 sentFriendRequest.map((item, index) => (
                     <div key={sentFriendRequest.id || index}>

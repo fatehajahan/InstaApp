@@ -6,8 +6,8 @@ import Profile from '../Profile/Profile'
 import SuggestedUser from '../SuggestedUser/SuggestedUser'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import FriendRequest from '../FollowRequest/FollowRequest'
-import Friends from '../Followers/Followers'
+import FriendRequest from '../FriendRequest/FriendRequest'
+import Friends from '../Friends/Friends'
 
 const Homepage = () => {
     const data = useSelector((state)=>state.userDetails.userInfo)

@@ -25,7 +25,7 @@ const Friends = () => {
     return (
         <div className='mt-[30px] py-[20px] px-[25px] bg-white shadow-2xl rounded-2xl'>
             <div>
-                <p className='font-roboto pb-[18px] font-semibold text-[18px]'>My Followers: </p>
+                <p className='font-roboto pb-[18px] font-semibold text-[18px]'>My Friends: </p>
                 {
                     friend.map((item) => (
                         <div className="id1 flex items-center justify-between">

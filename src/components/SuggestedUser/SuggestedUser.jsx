@@ -29,7 +29,6 @@ const SuggestedUser = () => {
 
   //FollowRequests
   const [sentFriendRequest, setSentFriendRequest] = useState([])
-  const [sentFollowRequest, setSentFollowRequest] = useState([])
   const handleFollow = (item) => {
     set(push(ref(db, 'sentfriendrequest/')), {
       senderid: data.uid,
