@@ -19,7 +19,6 @@ const Feed = () => {
                 console.log(item.val());
                 console.log(item.key);
                 arr.push(item.val())
-                 
             })
             setPostPublish(arr)
         })

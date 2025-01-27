@@ -64,7 +64,7 @@ const Sidebar = () => {
                 <p className='font-Pacifico text-[25px]'>InstaApp</p>
             </div>
 
-            <div className="sideOptions flex flex-col justify-between h-full pt-[38px]">
+            <div className="sideOptions flex flex-col h-full pt-[38px] gap-y-[40px]">
                 <div className='flex flex-col gap-y-[40px]'>
                     <Link to='/homepage'>
                         <div className="home flex items-center gap-x-[20px] cursor-pointer">
@@ -102,7 +102,6 @@ const Sidebar = () => {
                                 notification &&
                                     sentFollowRequest.length > 0 ? <div onClick={() => setNotification(false)} className='bg-red-600 w-[10px] h-[10px] rounded-full absolute top-0 right-0'></div> : <div></div>
                             }
-                            {/* <div className='bg-red-600 w-[10px] h-[10px] rounded-full absolute top-0 right-0'></div> */}
                         </div>
                         <p className='text-[18px] font-bold font-roboto'>Notification</p>
                     </div>

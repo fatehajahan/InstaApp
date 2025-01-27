@@ -14,9 +14,6 @@ const Friends = () => {
         onValue(followerRef, (snapshot) => {
             let arr = []
             snapshot.forEach((item) => {
-                console.log(item.val().receiverid, 'rec');
-                console.log(item.val().senderid, 'sen');
-                
                 if(data.uid == item.val().receiverid || data.uid == item.val().senderid){
                     arr.push(item.val());
                 }
@@ -24,7 +21,6 @@ const Friends = () => {
             setFollower(arr)
         })
     }, [])
-    console.log(follower);
 
     return (
         <div className='mt-[30px] py-[20px] px-[25px] bg-white shadow-2xl rounded-2xl'>

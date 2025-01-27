@@ -12,6 +12,7 @@ import Login from './Pages/Login/Login';
 import Message from './components/Message/Message';
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import ProfilePage from './components/ProfilePage/ProfilePage';
+import EditProfile from './components/EditProfile/EditProfile';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path='/message' element={<Message/>}/>
       <Route path='/forgotpassword' element={<ForgotPassword/>}/>
       <Route path='/profilepage' element={<ProfilePage/>}/>
+      <Route path='/editprofile' element={<EditProfile/>}/>
     </Route>
   )
 )

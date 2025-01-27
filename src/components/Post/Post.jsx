@@ -40,7 +40,7 @@ const Post = () => {
     }
     return (
         <div className='w-full'>
-            <div className='bg-white shadow-2xl px-[30px] py-[20px]'>
+            <div className='bg-white shadow-2xl px-[30px] py-[20px] rounded-2xl'>
                 <div className='flex items-center gap-x-[20px]'>
                     <img src={profileImg} alt="" className='rounded-full w-[60px]' />
                     <input value={post} onChange={(e) => setPost(e.target.value)} type="text"

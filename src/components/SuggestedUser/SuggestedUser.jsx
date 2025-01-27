@@ -76,8 +76,7 @@ const SuggestedUser = () => {
       </div>
 
 
-      <div className="suggestedUser pt-[20px] flex flex-col gap-y-[20px] h-[400px] overflow-y-scroll overflow-x-hidden">
-
+      <div className="suggestedUser pt-[20px] flex flex-col gap-y-[20px] h-[400px] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#ff5acb] scrollbar-track-gray-200 overflow-x-hidden pr-[30px]">
         {
           suggestedUser.map((item, index) => (
             <div key={suggestedUser.id || index} className="id1 flex items-center justify-between">
