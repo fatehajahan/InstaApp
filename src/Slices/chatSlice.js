@@ -21,25 +21,3 @@ export const chatSlice = createSlice({
 export const { chatInfo } = chatSlice.actions
 
 export default chatSlice.reducer
-
-// import { createSlice } from '@reduxjs/toolkit'
-
-// const initialState = {
-//   chatInfo: localStorage.getItem('chatInfo') ? JSON.parse(localStorage.getItem('chatInfo')) : null,
-// }
-
-// export const chatSlice = createSlice({
-//   name: 'chat',
-//   initialState,
-//   reducers: {
-//     chatInfo: (state, action) => {
-//       state.chatInfo = action.payload
-
-//     }
-//   },
-// })
-
-// export const { chatInfo } = chatSlice.actions
-
-// export default chatSlice.reducer
-
