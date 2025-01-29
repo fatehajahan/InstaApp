@@ -55,19 +55,18 @@ const Registration = () => {
         .then((user) => {
           updateProfile(auth.currentUser, {
             displayName: name
-          })
-            .then(() => {
-              console.log(user);
-              toast.success("Registration Done SuccessFully !!!")
-              setTimeout(() => {
-                navigate('/login')
-              }, 2000);
-            }).then(() => {
-              set(ref(db, 'users/' + user.user.uid), {
-                username: user.user.displayName,
-                email: user.user.email
-              })
+          }).then(() => {
+            console.log(user);
+            toast.success("Registration Done SuccessFully !!!")
+            setTimeout(() => {
+              navigate('/login')
+            }, 2000);
+          }).then(() => {
+            set(ref(db, 'users/' + user.user.uid), {
+              username: user.user.displayName,
+              email: user.user.email
             })
+          })
         })
         .catch((error) => {
           const errorCode = error.code;

@@ -99,7 +99,7 @@ const ProfilePage = () => {
                         <img src={profileImg} alt="" className='rounded-full' />
                     </div>
                     <div>
-                        <p className='font-roboto text-[30px]'>Fateha Jahan</p>
+                        <p className='font-roboto text-[30px]'>{data.displayName}</p>
                         {
                             bioArr.length > 0 && (
                                 <div><p className='font-Pacifico text-[18px] pb-[30px]'>{bioArr[0].bio}</p></div>
@@ -111,7 +111,7 @@ const ProfilePage = () => {
                             <p className='hover:underline transition duration-500'>1 following</p>
                         </div>
                         <div className='pt-[30px]'>
-                            <p className='font-roboto text-[23px]'>Fateha Jahan</p>
+                            <p className='font-roboto text-[23px]'>{data.displayName}</p>
                             {
                                 bio
                                     ? <div>

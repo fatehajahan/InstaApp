@@ -36,7 +36,7 @@ const Post = () => {
             posterid: data.uid,
             postername: data.displayName
         })
-        setShowEmojiPicker((emoji) => !emoji)
+        setShowEmojiPicker(false)
     }
     return (
         <div className='w-full'>
