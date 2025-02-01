@@ -24,7 +24,7 @@ const sentFollowRequest = () => {
     //followAccept
 
     const handleAccept = (item) => {
-        set(push(ref(db, 'friends')), {
+        set(push(ref(db, 'friends/')), {
             ...item
         }).then(() => {
             remove(ref(db, 'sentfriendrequest/' + item.userid))

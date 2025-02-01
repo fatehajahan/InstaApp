@@ -78,11 +78,6 @@ const Sidebar = () => {
                         <p className='text-[18px] font-bold font-roboto'>Search</p>
                     </div>
 
-                    <div className="explore flex items-center gap-x-[20px] cursor-pointer">
-                        <MdOutlineExplore className='text-[29px] ' />
-                        <p className='text-[18px] font-bold font-roboto'>Explore</p>
-                    </div>
-
                     <div className="reels flex items-center gap-x-[20px] cursor-pointer">
                         <MdOutlineSlowMotionVideo className='text-[29px] ' />
                         <p className='text-[18px] font-bold font-roboto'>Reels</p>
