@@ -51,7 +51,7 @@ const Post = () => {
                         <div onClick={handlePost} className='bg-[#ff5acb] inline-block py-[8px] px-[20px] rounded-full mt-[10px] cursor-pointer'>
                             <p className='font-Pacifico'>Post</p>
                         </div>
-                        <FaRegSmile onClick={emojiPick} className='absolute top-[40%] left-[10%] text-[20px] text-[#ff5acb] cursor-pointer' />
+                        <FaRegSmile onClick={emojiPick} className='absolute top-[40%] left-[100px] text-[20px] text-[#ff5acb] cursor-pointer' />
                     </div>
 
                     <div className='block relative'>
