@@ -75,8 +75,8 @@ const Login = () => {
             });
     }
     return (
-        <div className='flex  justify-between items-center p-[30px]'>
-            <div className=' ml-[90px] bg-white shadow-2xl w-[700px] px-[50px] py-[25px] rounded-xl mt-[60px]'>
+        <div className='md:flex justify-between items-center md:p-[30px]'>
+            <div className='md:ml-[90px] bg-white shadow-2xl md:w-[700px] px-[50px] py-[25px] rounded-xl mt-[60px]'>
                 <ToastContainer
                     position="top-center"
                     autoClose={5000}
@@ -139,7 +139,7 @@ const Login = () => {
             </div>
 
             <div>
-                <img src={login} alt="" className='mx-auto mr-[90px] w-[600px] h-[600px]' />
+                <img src={login} alt="" className='mx-auto mr-[90px]  md:block hidden' />
             </div>
         </div>
     )

@@ -147,20 +147,23 @@ const Message = () => {
         }
     }
     return (
-        <div className='p-6 flex justify-between'>
+        <div className='md:p-6 py-[30px] px-[30px] md:flex justify-between'>
 
-            <div className='sidebar w-[250px]'>
+            <div className='sidebar md:w-[250px] md:block hidden'>
                 <Sidebar />
             </div>
 
-            <div className="leftFollowers w-1/4">
-                <div className="flex flex-col gap-y-[20px]">
-                    <p className='font-Pacifico text-[20px]'>{data.displayName}</p>
+            <div className="leftFollowers md:w-1/4">
+                <div className="flex items-center md:mx-0 mx-auto gap-x-[20px]">
                     <img src={profileImg} alt="" className='rounded-full w-[80px] cursor-pointer' />
+                    <div>
+                        <p className='font-Pacifico text-[20px]'>{data.displayName}</p>
+                        <p className='font-Pacifico md:text-[20px]'>{data.email}</p>
+                    </div>
                 </div>
 
                 <div className="messages mt-[50px]">
-                    <p className='font-roboto text-[25px] pb-[18px]'>Friends to message</p>
+                    <p className='font-roboto text-[25px] md:text-left text-center pb-[18px]'>Friends to message</p>
                     {
                         follower.map((item, index) => (
                             <div key={index} onClick={() => handlechat(item)} className="id1 flex items-center justify-between">
@@ -234,7 +237,7 @@ const Message = () => {
                         }
                     </div>
                 </div>
-                    : <div className='w-1/2 bg-[#ff5acb] h-screen p-8'>
+                    : <div className='md:w-1/2 bg-[#ff5acb] h-screen p-8 md:block hidden'>
                         <h1 className=' font-Pacifico mx-auto text-center text-[50px] w-[450px] mt-[220px] px-[10px] py-[20px] border-separate border'>
                             Click On any Followers to start a Chat !!!
                         </h1>

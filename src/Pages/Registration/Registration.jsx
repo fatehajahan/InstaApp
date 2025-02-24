@@ -101,7 +101,7 @@ const Registration = () => {
       });
   }
   return (
-    <div className=' flex  justify-between items-center p-[30px]'>
+    <div className='md:flex justify-between items-center md:p-[30px]'>
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -115,7 +115,7 @@ const Registration = () => {
         theme="light"
         transition={Bounce}
       />
-      <div className='ml-[90px] bg-white shadow-2xl w-[700px] px-[50px] py-[25px] rounded-xl mt-[60px]'>
+      <div className='bg-white shadow-2xl md:w-[700px] px-[50px] py-[25px] rounded-xl md:my-[60px] my-[30px]'>
         <div className="title">
           <p className='font-Pacifico text-[60px] text-center'>InstaApp</p>
           <p className='font-roboto text-[16px] text-center w-[280px] mx-auto pt-[20px]'>Sign up to see photos and videos from your friends.</p>
@@ -140,7 +140,7 @@ const Registration = () => {
               <p className='text-red-600 font-roboto font-bold text-[12px] absolute'>{nameErr}</p>
             </div>
 
-            <div onChange={handlePassword} className='password relative'>
+            <div onChange={handlePassword} className='password relative md:mb-0 mb-[20px]'>
               <input type={`${showPassword ? 'text' : 'password'
                 }`} placeholder='Please Enter a Password' className='px-[8px] py-[10px] w-full mt-[25px] border bg-[#FAFAFA] rounded-md' />
               {
@@ -153,7 +153,7 @@ const Registration = () => {
               <p className='text-red-600 font-roboto font-bold text-[12px] absolute'>{passwordErr}</p>
             </div>
 
-            <p className='text-center w-[450px] mx-auto font-roboto pt-[23px] text-[#8587B7]'>By signing up, you agree to our <span className='text-[#00376B]'>Terms , Privacy Policy</span> and <span className='text-[#00376B]'>Cookies Policy .</span></p>
+            <p className='text-center md:w-[450px] mx-auto font-roboto pt-[23px] text-[#8587B7] md:pb-0 pb-[20px]'>By signing up, you agree to our <span className='text-[#00376B]'>Terms , Privacy Policy</span> and <span className='text-[#00376B]'>Cookies Policy .</span></p>
           </div>
         </div>
 
@@ -169,7 +169,7 @@ const Registration = () => {
       </div>
 
       <div>
-        <img src={image} alt="" className='mr-[90px]' />
+        <img src={image} alt="" className='mr-[90px] md:block hidden' />
       </div>
     </div>
   )
