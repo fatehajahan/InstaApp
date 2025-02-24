@@ -139,7 +139,7 @@ const Login = () => {
             </div>
 
             <div>
-                <img src={login} alt="" className='mx-auto mr-[90px]' />
+                <img src={login} alt="" className='mx-auto mr-[90px] w-[600px] h-[600px]' />
             </div>
         </div>
     )
