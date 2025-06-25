@@ -10,32 +10,34 @@ import FriendRequest from '../FriendRequest/FriendRequest'
 import Friends from '../Friends/Friends'
 
 const Homepage = () => {
-    const data = useSelector((state)=>state.userDetails.userInfo)
+    const data = useSelector((state) => state.userDetails.userInfo)
     console.log(data);
     const navigate = useNavigate()
-    useEffect(()=>{
-        if(!data){
+    useEffect(() => {
+        if (!data) {
             navigate('/login')
         }
     })
     return (
         <div>
             <div className='p-6'>
-                <div className='flex justify-between gap-x-8'>
-                    <div className='w-1/5'>
+                <div className='md:flex justify-between gap-x-8'>
+                    <div className='md:w-1/5'>
                         <Sidebar />
                     </div>
 
-                    <div className='w-1/2'>
+                    <div className='md:w-1/2'>
                         <Post />
                         <Feed />
                     </div>
 
-                    <div className='w-1/3'>
-                        <Profile />
+                    <div className='md:w-1/3'>
+                        <div className='md:block hidden'>
+                            <Profile />
+                        </div>
                         <SuggestedUser />
-                        <FriendRequest/>
-                        <Friends/>
+                        <FriendRequest />
+                        <Friends />
                     </div>
                 </div>
             </div>
