@@ -42,6 +42,30 @@
 
 
 ## 📁 Folder Structure
+src/
+├── assets/               # Static files (e.g. images, icons)
+├── components/           # Reusable UI and functional components
+│   ├── Authentication/   # Login, SignUp, and related auth components
+│   ├── EditProfile/      # Edit user details
+│   ├── Feed/             # Central feed view
+│   ├── FriendRequest/    # Handle friend requests
+│   ├── Friends/          # List of friends
+│   ├── Homepage/         # Dashboard/Homepage layout
+│   ├── Message/          # Chat and messaging components
+│   ├── Post/             # Post creation and display
+│   ├── Profile/          # User profile view
+│   ├── ProfilePage/      # Complete profile page
+│   ├── Sidebar/          # Sidebar navigation
+│   └── SuggestedUser/    # Suggested friends to follow
+├── Pages/                # Route-based pages
+│   ├── ForgotPassword/   # Password reset page
+│   ├── Login/            # Login page
+│   └── Registration/     # Sign up page
+├── Slices/               # Redux slices for state management
+├── Store.js              # Redux store configuration
+├── App.js                # Route and layout setup
+├── main.jsx              # React app entry point
+├── App.css / index.css   # Global styles
 
 ## 📦 How to Run the Project Locally
 
