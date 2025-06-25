@@ -120,12 +120,12 @@ const Registration = () => {
           <p className='font-Pacifico text-[60px] text-center'>InstaApp</p>
           <p className='font-roboto text-[16px] text-center w-[280px] mx-auto pt-[20px]'>Sign up to see photos and videos from your friends.</p>
         </div>
-        <div onClick={googleSignUp} className="SignUpWithGoogle flex items-center justify-center gap-x-[15px] bg-[#ff5acb] w-[300px] mx-auto py-[10px] mt-[20px] rounded-full cursor-pointer">
+        <div onClick={googleSignUp} className="SignUpWithGoogle flex items-center justify-center gap-x-[15px] bg-[#ff5acb] md:w-[300px] mx-auto py-[10px] mt-[20px] rounded-full cursor-pointer">
           <FaGoogle className='text-[25px] text-white' />
           <p className='text-[17px] text-white font-bold'>Sign Up with Google</p>
         </div>
         <div className='bg-[#DBDBDB] w-full h-[3px] mt-[25px] relative'>
-          <p className='absolute top-[-12px] left-[47%] bg-white px-[10px] font-roboto text-[18px] text-[#737373]'>OR</p>
+          <p className='absolute top-[-12px] md:left-[47%] left-[40%] bg-white px-[10px] font-roboto text-[18px] text-[#737373]'>OR</p>
         </div>
 
         <div className="informations">
@@ -157,7 +157,7 @@ const Registration = () => {
           </div>
         </div>
 
-        <div onClick={handleSubmit} className='bg-[#ff5acb] w-[300px] mx-auto text-center rounded-full py-[10px] mt-[15px] cursor-pointer'>
+        <div onClick={handleSubmit} className='bg-[#ff5acb] md:w-[300px] mx-auto text-center rounded-full py-[10px] mt-[15px] cursor-pointer'>
           <p className=' text-white font-roboto font-bold text-[18px]'>Sign up</p>
         </div>
 

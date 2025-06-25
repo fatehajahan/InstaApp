@@ -114,15 +114,15 @@ const Login = () => {
                     </div>
                 </div>
 
-                <div onClick={handleLogIn} className='bg-[#ff5acb] w-[300px] mx-auto text-center rounded-full py-[10px] mt-[15px] cursor-pointer'>
+                <div onClick={handleLogIn} className='bg-[#ff5acb] md:w-[300px] mx-auto text-center rounded-full py-[10px] mt-[15px] cursor-pointer'>
                     <p className=' text-white font-roboto font-bold text-[18px]'>Log In</p>
                 </div>
 
                 <div className='bg-[#DBDBDB] w-full h-[3px] mt-[30px] relative'>
-                    <p className='absolute top-[-12px] left-[47%] bg-white px-[10px] font-roboto text-[18px] text-[#737373]'>OR</p>
+                    <p className='absolute top-[-12px] md:left-[47%] left-[40%] bg-white px-[10px] font-roboto text-[18px] text-[#737373]'>OR</p>
                 </div>
 
-                <div onClick={handleGoogleLogin} className="loginWithGoogle flex items-center justify-center gap-x-[15px] bg-[#ff5acb] w-[300px] mx-auto py-[10px] mt-[30px] rounded-full cursor-pointer">
+                <div onClick={handleGoogleLogin} className="loginWithGoogle flex items-center justify-center gap-x-[15px] bg-[#ff5acb] md:w-[300px] mx-auto py-[10px] mt-[30px] rounded-full cursor-pointer">
                     <FaGoogle className='text-[25px] text-white' />
                     <p className='text-[17px] text-white font-bold'>Log in with Google</p>
                 </div>
