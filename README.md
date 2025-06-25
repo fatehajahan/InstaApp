@@ -46,7 +46,7 @@
 ## 📦 How to Run the Project Locally
 
 ### 1. Clone the Repository
-```bash
+bash
 git clone https://github.com/fatehajahan/InstaApp
 cd instaApp
 
