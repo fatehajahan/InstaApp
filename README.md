@@ -54,6 +54,7 @@ Install Dependencies
 bash: 
 npm install
 
+## 📦 Images of my InstaApp
 #### 🔐 Login Page
 ![alt text](image.png)
 
