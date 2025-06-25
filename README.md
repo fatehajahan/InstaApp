@@ -46,13 +46,11 @@
 ## 📦 How to Run the Project Locally
 
 ### 1. Clone the Repository
-bash
+bash:
 git clone https://github.com/fatehajahan/InstaApp
-cd instaApp
-
-Install Dependencies
-bash: 
-npm install
+and cd instaApp and then to Install Dependencies
+bash: npm install
+or you can also visit my hosted link - https://insta-app-omega.vercel.app/
 
 ## 📦 Images of my InstaApp
 #### 🔐 Login Page
